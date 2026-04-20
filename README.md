@@ -1,34 +1,17 @@
-# SDN Firewall using POX and Mininet
+SDN Firewall using POX and Mininet
+Problem Statement
 
-## Problem Statement
-Implement a Software Defined Networking (SDN) firewall using the POX controller and Mininet.  
-The firewall should block traffic from host h1 (10.0.0.1) to host h3 (10.0.0.3) while allowing all other communication.
+Implement a Software Defined Networking (SDN) firewall using the POX controller and Mininet.
+The firewall blocks traffic from h1 (10.0.0.1) to h3 (10.0.0.3) while allowing all other communication.
 
----
-
-## Technologies Used
-- Python 3.9  
-- POX Controller  
-- Mininet  
-- Open vSwitch  
-- Wireshark  
-
----
-
-## Project Structure
-
-sdn-firewall-mininet-pox/
-│── pox/
-│ └── pox/misc/firewall_controller.py
-│── README.md
-
-
----
-
-## Setup Instructions
-
-### 1. Install Dependencies
-```bash
+Technologies Used
+Python 3.9
+POX Controller
+Mininet
+Open vSwitch
+Wireshark
+Setup Instructions
+1. Install Dependencies
 sudo apt update
 sudo apt install mininet openvswitch-switch wireshark -y
 sudo apt install python3.9 python3.9-venv -y
@@ -58,7 +41,7 @@ Expected: 100% packet loss
 Allowed Traffic
 h2 ping h3
 
-Expected: Successful ping
+Expected: Ping successful
 
 Flow Table Verification
 sudo ovs-ofctl dump-flows s1
